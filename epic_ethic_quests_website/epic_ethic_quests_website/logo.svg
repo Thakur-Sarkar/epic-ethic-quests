@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Epic Ethic Quests logo">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd66b"/><stop offset="1" stop-color="#ff980b"/>
+    </linearGradient>
+    <linearGradient id="pages" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00c2a8"/><stop offset="1" stop-color="#087fd1"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="54" r="43" fill="#102b47" stroke="url(#gold)" stroke-width="3"/>
+  <path d="M20 73 Q42 56 64 72 Q86 56 108 73 L108 94 Q85 80 64 97 Q43 80 20 94Z" fill="url(#pages)" stroke="#d9fff5" stroke-width="2"/>
+  <path d="M64 72V96" stroke="#eafffa" stroke-width="2.5"/>
+  <path d="M64 17 L70 34 L88 34 L74 45 L79 62 L64 52 L49 62 L54 45 L40 34 L58 34Z" fill="url(#gold)" stroke="#fff1c4" stroke-width="1.5"/>
+  <path d="M29 64 Q40 54 51 61" fill="none" stroke="#ff980b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M77 61 Q89 53 99 64" fill="none" stroke="#ff980b" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="23" cy="34" r="3" fill="#00c2a8"/><circle cx="104" cy="27" r="3" fill="#00c2a8"/>
+  <path d="M17 104 Q64 116 111 104" fill="none" stroke="#ff980b" stroke-width="4" stroke-linecap="round"/>
+</svg>

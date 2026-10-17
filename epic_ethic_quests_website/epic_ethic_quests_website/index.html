@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Hindi and English AI-generated stories, animated tales, and YouTube Shorts.">
+  <title>Epic Ethic Quests | AI Story Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Epic Ethic Quests home">
+      <img class="brand-logo" src="logo.svg" alt="">
+      <span>Story<span class="brand-accent">Verse</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#stories" class="nav-link">Stories</a>
+      <a href="#about" class="nav-link">About</a>
+    </nav>
+    <a class="header-cta" href="#stories">Explore stories <span>↗</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> STORIES BEYOND IMAGINATION</div>
+        <h1>Every story opens<br>another <span>world.</span></h1>
+        <p class="hero-description">Discover imaginative AI-assisted stories, animated adventures, and short tales in Hindi and English.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#stories">Explore library <span>→</span></a>
+          <a class="button button-secondary" href="#about">Our little universe</a>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack" aria-hidden="true"><span>🐻</span><span>🦊</span><span>🐼</span></div>
+          <p><strong>New worlds to discover</strong><br><span>Stories for curious minds</span></p>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Decorative storybook illustration">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-moon">☾</div>
+        <div class="hero-star star-a">✦</div><div class="hero-star star-b">✧</div><div class="hero-star star-c">✦</div>
+        <div class="hero-planet"></div>
+        <div class="storybook">
+          <div class="book-spine"></div>
+          <div class="book-label">ONCE UPON<br>A TIME</div>
+          <div class="book-tree">♧</div>
+          <div class="book-hill"></div>
+          <div class="book-caption">A new adventure awaits…</div>
+        </div>
+        <div class="floating-note note-top">✧ Imagination, animated</div>
+        <div class="floating-note note-bottom">▶ Your next favourite story</div>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Library features">
+      <div><strong>01</strong><span>Original story ideas</span></div>
+      <div><strong>02</strong><span>Hindi + English</span></div>
+      <div><strong>03</strong><span>Watch on YouTube</span></div>
+    </section>
+
+    <section class="library-section" id="stories">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">THE STORY COLLECTION</div>
+          <h2>Find your next <span>adventure.</span></h2>
+          <p class="section-description">Pick a mood, choose a language, and press play.</p>
+        </div>
+        <div class="library-count"><span id="resultCount">6</span> stories to explore</div>
+      </div>
+
+      <div class="filters">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search stories..." aria-label="Search stories"></label>
+        <label class="select-wrap"><span class="sr-only">Filter by language</span>
+          <select id="languageFilter"><option value="all">All languages</option><option value="Hindi">Hindi</option><option value="English">English</option></select>
+        </label>
+        <label class="select-wrap"><span class="sr-only">Filter by category</span>
+          <select id="categoryFilter"><option value="all">All categories</option><option value="Moral">Moral stories</option><option value="Adventure">Adventure</option><option value="Fantasy">Fantasy</option><option value="Shorts">Shorts</option><option value="Mystery">Mystery</option></select>
+        </label>
+      </div>
+
+      <div class="story-grid" id="storyGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <div>✧</div><h3>No stories found</h3><p>Try a different title, language, or category.</p>
+        <button class="button button-secondary" id="resetFilters">Clear filters</button>
+      </div>
+      <p class="demo-note"><span>ⓘ</span> Demo library: replace the sample video IDs in <code>script.js</code> with your own YouTube video IDs.</p>
+    </section>
+
+    <section class="feature-banner" id="about">
+      <div class="banner-sparkle">✦</div>
+      <div>
+        <div class="eyebrow">A LITTLE MAGIC, A LOT OF STORY</div>
+        <h2>Made for dreamers.<br><span>Built around stories.</span></h2>
+        <p>Our goal is to make every visit feel like opening a new storybook. New tales, new characters, and new possibilities—one video at a time.</p>
+      </div>
+      <a class="button button-light" href="#stories">Discover stories <span>→</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#"><img class="brand-logo" src="logo.svg" alt=""><span>Story<span class="brand-accent">Verse</span></span></a>
+    <p>Imagine • Explore • Learn.</p>
+    <span class="copyright">© <span id="year"></span> Epic Ethic Quests. Imagine • Explore • Learn.</span>
+  </footer>
+
+  <div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-panel">
+      <button class="modal-close" id="modalClose" aria-label="Close video">×</button>
+      <div class="video-frame" id="videoFrame"></div>
+      <div class="modal-info"><div><p class="modal-kicker" id="modalMeta"></p><h2 id="modalTitle">Story title</h2><p id="modalDescription"></p></div><a class="button button-primary" id="youtubeLink" href="#" target="_blank" rel="noopener noreferrer">Open on YouTube ↗</a></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
